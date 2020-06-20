@@ -13,6 +13,5 @@ class TypesOfFood extends React.Component {
         );
     }
 }
-
 const targetNode = document.getElementById('challenge-node')
 ReactDOM.render(<TypesOfFood/>, targetNode)
