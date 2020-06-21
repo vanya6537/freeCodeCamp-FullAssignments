@@ -14,8 +14,8 @@ Object.keys(themes).forEach((section) => {
     themes[section].forEach(subject => {
         const filePath = `./${section}/${subject}.js`
         fs.writeFile(filePath, '', {flag: 'wx'}, function (err) {
-            if (err) throw err;
-            console.log("It's saved!");
+            // if (err) console.error(err)
+            // console.log("It's saved!");
         });
     })
 })
