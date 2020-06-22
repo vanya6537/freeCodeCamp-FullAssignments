@@ -10,9 +10,10 @@ Object.keys(themes).forEach((section) => {
         fs.mkdirSync(section
         );
     }
+    const extension = ['React', 'ReactAndRedux', 'Redux'].includes(section) ? 'js' : 'html'
     //When directory is truly created - for every subject of this section we create separate javascript file
     themes[section].forEach(subject => {
-        const filePath = `./${section}/${subject}.js`
+        const filePath = `./${section}/${subject}.${extension}`
         fs.writeFile(filePath, '', {flag: 'wx'}, function (err) {
             // if (err) console.error(err)
             // console.log("It's saved!");
