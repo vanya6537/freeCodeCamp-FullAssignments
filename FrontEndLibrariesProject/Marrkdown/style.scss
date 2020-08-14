@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+$backgroundBase: #fff;
+$font: Russo One;
+$darkAccent: black;
+$shadow: 1px 1px 10px 2px darken($backgroundBase, 20%);
+
+
+div {
+  position: relative;
+  z-index: 2;
+}
+
+body {
+  background: $backgroundBase;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+}
+
+.editor, .previewer {
+  box-shadow: $shadow;
+}
+
+.editor {
+  //border-radius: 10px;
+  width: 600px;
+  margin: 20px;
+  padding: 4px;
+  min-height: 400px;
+
+  textarea {
+    min-width: 99%;
+    min-height: 400px;
+    margin-bottom: -5px;
+    resize: vertical;
+    border: none;
+    padding: 2px;
+    font-size: 12px;
+  }
+}
+
+.previewer {
+  @extend .editor;
+  padding: 30px;
+}
+
+.heading {
+  font-size: 2em;
+  padding: 4px 4px 3px 3px;
+  text-align: center;
+  font-family: $font;
+
+  i {
+    width: 25px;
+    color: black;
+    margin-right: 20px;
+  }
+}
+
+// MARKDOWN STYLES
+#preview {
+  blockquote {
+    border-left: 3px solid #224B4B;
+    color: #224B4B;
+    padding-left: 5px;
+    margin-left: 25px;
+  }
+
+  code {
+    background: white;
+    padding: 1px 4px 2px 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  pre {
+    background: white;
+    padding: 5px 0 5px 5px;
+  }
+
+  h1 {
+    border-bottom: 2px solid $darkAccent;
+  }
+
+  h2 {
+    border-bottom: 1px solid $darkAccent;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    border: 2px solid $darkAccent;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
